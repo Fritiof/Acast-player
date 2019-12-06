@@ -20,7 +20,6 @@ const Player = () => {
     const { currentEpisode } = state;
     const {
         audio,
-        name = 'Choose episode',
         markers,
     } = currentEpisode || {};
 
@@ -67,7 +66,7 @@ const Player = () => {
         <div className={classes}>
             {currentEpisode && <Markers markers={markers} currentTime={currentTime} duration={duration} />}
             <div className="player-navigation">
-                {!currentEpisode && <p>{name}</p>}
+                {!currentEpisode && <p>Choose episode</p>}
                 {currentEpisode &&
                 <>
                     <div className="controls">
