@@ -27,15 +27,21 @@
 .player-wrapper .controls {
     display: flex;
     justify-content: center;
-    padding: 5px;
+    margin: 20px;
+    border: 1px solid white;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
+    border-radius: 2px;
 }
 
 .player-wrapper .controls .control {
     padding: 10px;
     background-color: black;
-    border-radius: 5px;
     color: white;
-    margin: 0 5px;
+    border: none;
+}
+
+.control:nth-child(odd) {
+    border-right: 1px solid white !important;
 }
 
 .player-wrapper .time-controls {
@@ -54,14 +60,16 @@
     width: 100%;
 }
 
-@media (max-width: 700px) {
-    .player-wrapper {
-        padding: 2%;
-        align-items: flex-start;
+@media (max-width: 800px) {
+    .controls {
+        margin: 5px !important;
     }
 
-    /* .player-navigation {
-        margin: 0 10px;
-        box-sizing: border-box;
-    } */
+    .player-navigation {
+        justify-content: space-between !important;
+    }
+
+    .player-wrapper {
+        padding: 2%;
+    }
 }

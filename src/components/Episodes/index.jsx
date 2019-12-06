@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
-import './style.css';
 import { getEpisodes } from '../../api';
+import './style.css';
 
 import { PlayerStore, CONSTANTS } from '../../contexts/PlayerContext';
 
