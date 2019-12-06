@@ -1,22 +1,26 @@
 .App {
-  text-align: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
+.App.player-shown {
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 8vh;
+  min-height: 50px;
+  width: 100%;
+  background-color: #38785d;
+  border-bottom: 1px solid white;
 }
 
-.App-link {
-  color: #09d3ac;
+.Footer {
+  width: 100%;
+  position: absolute;
+  min-height: 90px;
+  bottom: 0;
+  background: gray;
 }

@@ -1,0 +1,67 @@
+.player-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5px 20%;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #38785d;
+    position: fixed;
+    bottom: 0;
+}
+
+.player-wrapper .player-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+}
+
+.player-navigation.no-episode {
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-wrapper .controls {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.player-wrapper .controls .control {
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    margin: 0 5px;
+}
+
+.player-wrapper .time-controls {
+    flex-basis: 50%;
+
+}
+
+.player-wrapper .episode-swiper {
+    height: 30px;
+    width: 100%;
+}
+
+.player-wrapper .current-time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .player-wrapper {
+        padding: 2%;
+        align-items: flex-start;
+    }
+
+    /* .player-navigation {
+        margin: 0 10px;
+        box-sizing: border-box;
+    } */
+}

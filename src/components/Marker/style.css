@@ -1,0 +1,24 @@
+.marker-wrapper {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 10px;
+    height: 18px;
+    transition: height 0.4s;
+}
+
+.marker-wrapper.image {
+    height: 110px;
+    transition: height 0.4s;
+}
+
+.marker-wrapper .ad-image {
+    border: 2px solid gray;
+    border-radius: 4px;
+    height: 110px;
+}
+
+.marker-wrapper .ad-link {
+    color: white;
+    border-radius: 4px;
+}
