@@ -20,9 +20,13 @@ const Episodes = () => {
 
     useEffect(() => {
         const fetchEps = async () => {
-            const res = await getEpisodes();
-            const { data = []} = res || {};
-            dispatch({ type: CONSTANTS.SET_EPISODES, payload: data })
+            try {
+                const res = await getEpisodes();
+                const { data = []} = res || {};
+                dispatch({ type: CONSTANTS.SET_EPISODES, payload: { episodes: data, networkError: false }})
+            } catch (error) {
+                dispatch({ type: CONSTANTS.SET_NET_ERROR, payload: true })
+            }
         }
         fetchEps();
     }, [dispatch]);

@@ -17,7 +17,7 @@ const createSrc = (src) => 'http://localhost:1337' + src;
 
 const Player = () => {
     const { state } = useContext(PlayerStore);
-    const { currentEpisode } = state;
+    const { currentEpisode, networkError } = state;
     const {
         audio,
         markers,
@@ -66,7 +66,8 @@ const Player = () => {
         <div className={classes}>
             {currentEpisode && <Markers markers={markers} currentTime={currentTime} duration={duration} />}
             <div className="player-navigation">
-                {!currentEpisode && <p>Choose episode</p>}
+                {!currentEpisode && !networkError && <p>Choose episode</p>}
+                {networkError && <p><b>Error fetching episodes</b></p>}
                 {currentEpisode &&
                 <>
                     <div className="controls">

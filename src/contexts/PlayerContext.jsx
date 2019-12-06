@@ -9,6 +9,7 @@ const {
     PLAYER_SHOWN,
     PLAY_EPISODE,
     SET_EPISODES,
+    SET_NET_ERROR,
 } = CONSTANTS;
 
 const initialState = {
@@ -26,7 +27,8 @@ const reducer = (state, action) => {
     case PLAYING: return { ...state, isPlaying: !state.isPlaying };
     case PLAYER_SHOWN: return { ...state, playerShown: !state.playerShown };
     case PLAY_EPISODE: return { ...state, currentEpisode: action.payload };
-    case SET_EPISODES: return { ...state, episodes: action.payload };
+    case SET_EPISODES: return { ...state, ...action.payload };
+    case SET_NET_ERROR: return { ...state, networkError: action.payload };
     default:
         return state;
     }
