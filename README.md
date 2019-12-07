@@ -12,4 +12,6 @@ Another thing that I would have liked to spend more time on in error handling, a
 
 I left out the optional part of the markers assignment, because of time reasons. Sorray!
 
+And also; known issue – the input range doesn't go all the way to the end when an episode has finished playing.
+
 Happy reading and have a merry christmas and a happy new year!!
